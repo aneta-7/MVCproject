@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Samoloty.Models.Przelot>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PunktStartowty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Czas1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PunktKoncowy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Czas2)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PunktStartowty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Data1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Czas1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PunktKoncowy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Data2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Czas2)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
