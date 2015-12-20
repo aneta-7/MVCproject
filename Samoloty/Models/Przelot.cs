@@ -20,7 +20,7 @@ namespace Samoloty.Models
 
 public class PrzelotDBContext : DbContext
 {
-        public override int SaveChanges() { return 0; }
+
         public DbSet<Przelot> Przeloty { get; set; }
     }
 }

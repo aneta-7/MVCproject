@@ -1,11 +1,12 @@
 ﻿@model Samoloty.Models.Samolot
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Delete";
 }
 
-<h2>Details</h2>
+<h2>Usuwanie</h2>
 
+<h3>Czy chcesz usunąć samolot?</h3>
 <div>
     <h4>Samolot</h4>
     <hr />
@@ -27,8 +28,15 @@
         </dd>
 
     </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+           
+            <input type="submit" value="Usuń" class="btn btn-primary"   onclick="return confirm('Czy na pewno chcesz usunąć?')"/> |
+
+            @Html.ActionLink("Wróć do spisu", "Index")
+        </div>
+    }
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

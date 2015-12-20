@@ -10,107 +10,107 @@ using Samoloty.Models;
 
 namespace Samoloty.Controllers
 {
-    public class Przelots1Controller : Controller
+    public class SamolotController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        private SamolotDBContext db = new SamolotDBContext();
 
-        // GET: Przelots1
+        // GET: Samolot
         public ActionResult Index()
         {
-            return View(db.Przelots.ToList());
+            return View(db.Samolots.ToList());
         }
 
-        // GET: Przelots1/Details/5
+        // GET: Samolot/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Przelot przelot = db.Przelots.Find(id);
-            if (przelot == null)
+            Samolot samolot = db.Samolots.Find(id);
+            if (samolot == null)
             {
                 return HttpNotFound();
             }
-            return View(przelot);
+            return View(samolot);
         }
 
-        // GET: Przelots1/Create
+        // GET: Samolot/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Przelots1/Create
+        // POST: Samolot/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,PunktStartowty,Data1,Czas1,PunktKoncowy,Data2,Czas2")] Przelot przelot)
+        public ActionResult Create([Bind(Include = "ID,Nazwa,Typ")] Samolot samolot)
         {
             if (ModelState.IsValid)
             {
-                db.Przelots.Add(przelot);
+                db.Samolots.Add(samolot);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(przelot);
+            return View(samolot);
         }
 
-        // GET: Przelots1/Edit/5
+        // GET: Samolot/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Przelot przelot = db.Przelots.Find(id);
-            if (przelot == null)
+            Samolot samolot = db.Samolots.Find(id);
+            if (samolot == null)
             {
                 return HttpNotFound();
             }
-            return View(przelot);
+            return View(samolot);
         }
 
-        // POST: Przelots1/Edit/5
+        // POST: Samolot/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,PunktStartowty,Data1,Czas1,PunktKoncowy,Data2,Czas2")] Przelot przelot)
+        public ActionResult Edit([Bind(Include = "ID,Nazwa,Typ")] Samolot samolot)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(przelot).State = EntityState.Modified;
+                db.Entry(samolot).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(przelot);
+            return View(samolot);
         }
 
-        // GET: Przelots1/Delete/5
+        // GET: Samolot/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Przelot przelot = db.Przelots.Find(id);
-            if (przelot == null)
+            Samolot samolot = db.Samolots.Find(id);
+            if (samolot == null)
             {
                 return HttpNotFound();
             }
-            return View(przelot);
+            return View(samolot);
         }
 
-        // POST: Przelots1/Delete/5
+        // POST: Samolot/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Przelot przelot = db.Przelots.Find(id);
-            db.Przelots.Remove(przelot);
+            Samolot samolot = db.Samolots.Find(id);
+            db.Samolots.Remove(samolot);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

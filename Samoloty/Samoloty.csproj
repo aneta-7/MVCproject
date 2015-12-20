@@ -171,10 +171,8 @@
     <Compile Include="Controllers\HelloWroldController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\Przelots1Controller.cs" />
-    <Compile Include="Controllers\PrzelotsController.cs" />
-    <Compile Include="Controllers\Samolots1Controller.cs" />
-    <Compile Include="Controllers\SamolotsController.cs" />
+    <Compile Include="Controllers\PrzelotController.cs" />
+    <Compile Include="Controllers\SamolotController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -207,7 +205,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -215,9 +215,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
+    <None Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Samolot\Shared\Error.cshtml" />
+    <Content Include="Views\Samolot\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -239,29 +239,19 @@
     <Content Include="Views\Manage\ManageLogins.cshtml" />
     <Content Include="Views\Manage\SetPassword.cshtml" />
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
-    <Content Include="Views\Shared\Lockout.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Samolot\Shared\Lockout.cshtml" />
+    <Content Include="Views\Samolot\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\HelloWrold\Index.cshtml" />
-    <Content Include="Views\Samolots\Create.cshtml" />
-    <Content Include="Views\Samolots\Delete.cshtml" />
-    <Content Include="Views\Samolots\Details.cshtml" />
-    <Content Include="Views\Samolots\Edit.cshtml" />
-    <Content Include="Views\Samolots\Index.cshtml" />
-    <Content Include="Views\Przelots\Create.cshtml" />
-    <Content Include="Views\Przelots\Delete.cshtml" />
-    <Content Include="Views\Przelots\Details.cshtml" />
-    <Content Include="Views\Przelots\Edit.cshtml" />
-    <Content Include="Views\Przelots\Index.cshtml" />
-    <Content Include="Views\Samolots1\Create.cshtml" />
-    <Content Include="Views\Samolots1\Delete.cshtml" />
-    <Content Include="Views\Samolots1\Details.cshtml" />
-    <Content Include="Views\Samolots1\Edit.cshtml" />
-    <Content Include="Views\Samolots1\Index.cshtml" />
-    <Content Include="Views\Przelots1\Create.cshtml" />
-    <Content Include="Views\Przelots1\Delete.cshtml" />
-    <Content Include="Views\Przelots1\Details.cshtml" />
-    <Content Include="Views\Przelots1\Edit.cshtml" />
-    <Content Include="Views\Przelots1\Index.cshtml" />
+    <Content Include="Views\Samolot\Create.cshtml" />
+    <Content Include="Views\Samolot\Delete.cshtml" />
+    <Content Include="Views\Samolot\Details.cshtml" />
+    <Content Include="Views\Samolot\Edit.cshtml" />
+    <Content Include="Views\Samolot\Index.cshtml" />
+    <Content Include="Views\Przelot\Create.cshtml" />
+    <Content Include="Views\Przelot\Delete.cshtml" />
+    <Content Include="Views\Przelot\Details.cshtml" />
+    <Content Include="Views\Przelot\Edit.cshtml" />
+    <Content Include="Views\Przelot\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
