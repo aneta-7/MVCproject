@@ -17,7 +17,8 @@ namespace Samoloty.Controllers
         // GET: Samolot
         public ActionResult Index()
         {
-            return View(db.Samolots.ToList());
+
+          return View(db.Samolots.ToList());
         }
 
         // GET: Samolot/Details/5
