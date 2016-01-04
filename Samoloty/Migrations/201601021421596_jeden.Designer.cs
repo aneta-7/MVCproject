@@ -7,13 +7,13 @@ namespace Samoloty.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class startowa : IMigrationMetadata
+    public sealed partial class jeden : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(startowa));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(jeden));
         
         string IMigrationMetadata.Id
         {
-            get { return "201512301948384_startowa"; }
+            get { return "201601021421596_jeden"; }
         }
         
         string IMigrationMetadata.Source

@@ -21,8 +21,7 @@ namespace Samoloty.Models
         [MaxLength(20)]
         public string Typ { get; set; }
         [Display(Name = "Przelot")]
-        [Required]
-        public ICollection<Przelot> Przelot { get; set; }
+        public ICollection<Przelot> Przelot_id { get; set; }
 
     }
 

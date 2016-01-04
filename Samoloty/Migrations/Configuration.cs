@@ -5,14 +5,15 @@ namespace Samoloty.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Samoloty.Models.PrzelotDBContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Samoloty.Models.ApplicationDbContext>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
-        protected override void Seed(Samoloty.Models.PrzelotDBContext context)
+        protected override void Seed(Samoloty.Models.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

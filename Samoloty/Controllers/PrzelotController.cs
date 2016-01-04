@@ -46,7 +46,7 @@ namespace Samoloty.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,PunktStartowty,Data1,Czas1,PunktKoncowy,Data2,Czas2")] Przelot przelot)
+        public ActionResult Create([Bind(Include = "ID,PunktStartowty,Data1,Czas1,PunktKoncowy,Data2,Czas2,Samolot_id")] Przelot przelot)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace Samoloty.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,PunktStartowty,Data1,Czas1,PunktKoncowy,Data2,Czas2")] Przelot przelot)
+        public ActionResult Edit([Bind(Include = "ID,PunktStartowty,Data1,Czas1,PunktKoncowy,Data2,Czas2,Samolot_id")] Przelot przelot)
         {
             if (ModelState.IsValid)
             {

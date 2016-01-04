@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace Samoloty.Models
 {
@@ -34,14 +35,13 @@ namespace Samoloty.Models
         [Required]
         public string Czas2 { get; set; }
         [Display(Name = "Samolot")]
-        [Required]
-        public ICollection<Samolot> Samolot_id { get;  set;}
-}
+        [MaxLength(50)]
+        public Samolot Samolot { get;  set;}
+    }
 
-public class PrzelotDBContext : DbContext
-{
+    public class PrzelotDBContext : DbContext
+    {
         public DbSet<Przelot> Przeloty { get; set; }
-
-        public System.Data.Entity.DbSet<Samoloty.Models.Samolot> Samoloty { get; set; }
     }
 }
+
